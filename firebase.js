@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyArVBx1yf0Int7J7VmcVAMMJPoSri5JrkU",
-  authDomain: "dashboard-3ea9d.firebaseapp.com",
-  databaseURL: "https://dashboard-3ea9d-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "dashboard-3ea9d",
-  storageBucket: "dashboard-3ea9d.appspot.com",
-  messagingSenderId: "480606938960",
-  appId: "1:480606938960:web:dabbfa26e3299c693dee55"
+  apiKey: "Your firebase API KEY",
+  authDomain: "Your firebase authDomain",
+  databaseURL: "Your firebase database URL",
+  projectId: "Your firebase Project id",
+  storageBucket: "Your firebase storage bucket",
+  messagingSenderId: "Your firebase messagingSenderId",
+  appId: "Your firebase app id"
 };
 
 // Initialize Firebase
