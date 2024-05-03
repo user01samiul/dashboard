@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "brand": "Apple",
+      "id": 1,
+      "photo": "https://cdn.dummyjson.com/product-images/1/1.jpg",
+      "price": "549",
+      "status": "In stock",
+      "title": "iPhone 9"
+    },
+    {
+      "brand": "Apple",
+      "id": 2,
+      "photo": "https://cdn.dummyjson.com/product-images/2/1.jpg",
+      "price": "899",
+      "status": "In stock",
+      "title": "iPhone X"
+    },
+    {
+      "brand": "Samsung",
+      "id": 3,
+      "photo": "https://cdn.dummyjson.com/product-images/3/1.jpg",
+      "price": "1249",
+      "status": "In stock",
+      "title": "Samsung Universe 9"
+    },
+    {
+      "brand": "OPPO",
+      "id": 4,
+      "photo": "https://cdn.dummyjson.com/product-images/4/1.jpg",
+      "price": "280",
+      "status": "In stock",
+      "title": "OPPOF19"
+    },
+    {
+      "brand": "Huawei",
+      "id": 5,
+      "photo": "https://cdn.dummyjson.com/product-images/5/1.jpg",
+      "price": "499",
+      "status": "In stock",
+      "title": "Huawei P30"
+    },
+    {
+      "brand": "Apple",
+      "id": 6,
+      "photo": "https://cdn.dummyjson.com/product-images/6/1.png",
+      "price": "1749",
+      "status": "In stock",
+      "title": "MacBook Pro"
+    },
+    {
+      "brand": "Samsung",
+      "id": 7,
+      "photo": "https://cdn.dummyjson.com/product-images/7/1.jpg",
+      "price": "1499",
+      "status": "In stock",
+      "title": "Samsung Galaxy Book"
+    },
+    {
+      "brand": "Microsoft Surface",
+      "id": 8,
+      "photo": "https://cdn.dummyjson.com/product-images/8/1.jpg",
+      "price": "1499",
+      "status": "In stock",
+      "title": "Microsoft Surface Laptop 4"
+    },
+    {
+      "brand": "Infinix",
+      "id": 9,
+      "photo": "https://cdn.dummyjson.com/product-images/9/1.jpg",
+      "price": "1099",
+      "status": "In stock",
+      "title": "Infinix INBOOK"
+    },
+    {
+      "brand": "HP Pavilion",
+      "id": 10,
+      "photo": "https://cdn.dummyjson.com/product-images/10/1.jpg",
+      "price": "1099",
+      "status": "In stock",
+      "title": "HP Pavilion 15-DK1056WM"
+    },
+    {
+      "brand": "Impression of Acqua Di Gio",
+      "id": 11,
+      "photo": "https://cdn.dummyjson.com/product-images/11/1.jpg",
+      "price": "13",
+      "status": "In stock",
+      "title": "perfume Oil"
+    },
+    {
+      "brand": "Royal_Mirage",
+      "id": 12,
+      "photo": "https://cdn.dummyjson.com/product-images/12/1.jpg",
+      "price": "40",
+      "status": "In stock",
+      "title": "Brown Perfume"
+    },
+    {
+      "brand": "Fog Scent Xpressio",
+      "id": 13,
+      "photo": "https://cdn.dummyjson.com/product-images/13/1.jpg",
+      "price": "13",
+      "status": "In stock",
+      "title": "Fog Scent Xpressio Perfume"
+    },
+    {
+      "brand": "Al Munakh",
+      "id": 14,
+      "photo": "https://cdn.dummyjson.com/product-images/14/1.jpg",
+      "price": "120",
+      "status": "In stock",
+      "title": "Non-Alcoholic Concentrated Perfume Oil"
+    },
+    {
+      "brand": "Lord - Al-Rehab",
+      "id": 15,
+      "photo": "https://cdn.dummyjson.com/product-images/15/1.jpg",
+      "price": "30",
+      "status": "In stock",
+      "title": "Eau De Perfume Spray"
+    },
+    {
+      "brand": "L'Oreal Paris",
+      "id": 16,
+      "photo": "https://cdn.dummyjson.com/product-images/16/1.png",
+      "price": "19",
+      "status": "In stock",
+      "title": "Hyaluronic Acid Serum"
+    },
+    {
+      "brand": "Hemani Tea",
+      "id": 17,
+      "photo": "https://cdn.dummyjson.com/product-images/17/1.jpg",
+      "price": "12",
+      "status": "In stock",
+      "title": "Tree Oil 30ml"
+    },
+    {
+      "brand": "Dermive",
+      "id": 18,
+      "photo": "https://cdn.dummyjson.com/product-images/18/1.jpg",
+      "price": "40",
+      "status": "In stock",
+      "title": "Oil Free Moisturizer 100ml"
+    },
+    {
+      "brand": "ROREC White Rice",
+      "id": 19,
+      "photo": "https://cdn.dummyjson.com/product-images/19/1.jpg",
+      "price": "46",
+      "status": "In stock",
+      "title": "Skin Beauty Serum."
+    },
+    {
+      "brand": "Fair & Clear",
+      "id": 20,
+      "photo": "https://cdn.dummyjson.com/product-images/20/1.jpg",
+      "price": "70",
+      "status": "In stock",
+      "title": "Freckle Treatment Cream- 15gm"
+    },
+    {
+      "brand": "Saaf & Khaas",
+      "id": 21,
+      "photo": "https://cdn.dummyjson.com/product-images/21/1.png",
+      "price": "20",
+      "status": "In stock",
+      "title": "- Daal Masoor 500 grams"
+    },
+    {
+      "brand": "Bake Parlor Big",
+      "id": 22,
+      "photo": "https://cdn.dummyjson.com/product-images/22/1.jpg",
+      "price": "14",
+      "status": "In stock",
+      "title": "Elbow Macaroni - 400 gm"
+    },
+    {
+      "brand": "Baking Food Items",
+      "id": 23,
+      "photo": "https://cdn.dummyjson.com/product-images/23/1.jpg",
+      "price": "14",
+      "status": "In stock",
+      "title": "Orange Essence Food Flavou"
+    },
+    {
+      "brand": "fauji",
+      "id": 24,
+      "photo": "https://cdn.dummyjson.com/product-images/24/1.jpg",
+      "price": "46",
+      "status": "In stock",
+      "title": "cereals muesli fruit nuts"
+    },
+    {
+      "brand": "Dry Rose",
+      "id": 25,
+      "photo": "https://cdn.dummyjson.com/product-images/25/1.png",
+      "price": "70",
+      "status": "In stock",
+      "title": "Gulab Powder 50 Gram"
+    },
+    {
+      "brand": "Boho Decor",
+      "id": 26,
+      "photo": "https://cdn.dummyjson.com/product-images/26/1.jpg",
+      "price": "41",
+      "status": "In stock",
+      "title": "Plant Hanger For Home"
+    },
+    {
+      "brand": "Flying Wooden",
+      "id": 27,
+      "photo": "https://cdn.dummyjson.com/product-images/27/1.jpg",
+      "price": "51",
+      "status": "In stock",
+      "title": "Flying Wooden Bird"
+    },
+    {
+      "brand": "LED Lights",
+      "id": 28,
+      "photo": "https://cdn.dummyjson.com/product-images/28/1.jpg",
+      "price": "20",
+      "status": "In stock",
+      "title": "3D Embellishment Art Lamp"
+    },
+    {
+      "brand": "luxury palace",
+      "id": 29,
+      "photo": "https://cdn.dummyjson.com/product-images/29/1.jpg",
+      "price": "60",
+      "status": "In stock",
+      "title": "Handcraft Chinese style"
+    },
+    {
+      "brand": "Golden",
+      "id": 30,
+      "photo": "https://cdn.dummyjson.com/product-images/30/1.jpg",
+      "price": "30",
+      "status": "In stock",
+      "title": "Key Holder"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.pieChartelement {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.pieChartText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pieChartText ul {
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  /* justify-items: center; */
+  font-size: 14px;
+  gap: 0 30px;
+}
+.pieChartText ul li {
+  position: relative;
+}
+.pieChartText ul li span {
+  /* content: ""; */
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+}
