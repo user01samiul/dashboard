@@ -2,7 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import Menu from "./components/menu";
+import Menu from "./components/Menu";
+
 
 function App() {
   return (
