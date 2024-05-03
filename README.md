@@ -2,7 +2,7 @@
 
 ![pphoto](https://github.com/user01samiul/dashboard/blob/main/public/screencapture-localhost-5173-2024-05-03-17_00_47%201.png)
 
-##Get the project in your local machine 
+<h2>Get the project in your local machine </h2>
 1.In shell/terminal type - Git pull https://github.com/user01samiul/dashboard.git
 2.Open with vscode.
 3.Open terminal in vscode and type "npm install"
