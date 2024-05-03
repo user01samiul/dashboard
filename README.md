@@ -1,4 +1,5 @@
-<h1>Preview</h1>
+<h2>Preview</h2>
+
 ![pphoto](https://github.com/user01samiul/dashboard/blob/main/public/screencapture-localhost-5173-2024-05-03-17_00_47%201.png)
 
 ##Get the project in your local machine 
