@@ -6,8 +6,10 @@ import {
   uploadBytes,
 } from "firebase/storage";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddProduct({ setShow, show, rows }) {
+  const navigate = useNavigate();
   const [newProductDetails, setNewProductDetails] = useState({
     id: "",
     title: "",
@@ -69,9 +71,7 @@ function AddProduct({ setShow, show, rows }) {
       // Save product details to the database
       await set(dataRef, uploadReady);
 
-      // Reload the page after successful upload
-      setShow(false); // Close the modal after adding new product
-      // window.location.reload();
+      window.location.assign("https://dashboard-eta-beryl-68.vercel.app/");
     } catch (err) {
       console.log(err);
     }
@@ -85,104 +85,114 @@ function AddProduct({ setShow, show, rows }) {
         </div>
         <h1>Add a new product</h1>
         <div className="new-product-details">
-          <table className="newProduct-table">
-            <tbody>
-              <tr>
-                <td> Product title</td>
-                <td>
-                  <input
-                    placeholder="Enter product title"
-                    name="title"
-                    className="newProduct-input"
-                    type="text"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.title}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Company</td>
-                <td>
-                  <input
-                    placeholder="Enter product company"
-                    name="brand"
-                    className="newProduct-input"
-                    type="text"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.company}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td> Model</td>
-                <td>
-                  <input
-                    placeholder="Enter product model"
-                    name="model"
-                    className="newProduct-input"
-                    type="text"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.model}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td> Price ($)</td>
-                <td>
-                  <input
-                    placeholder="Enter product price"
-                    name="price"
-                    className="newProduct-input"
-                    type="text"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.price}
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td> Description</td>
-                <td>
-                  <textarea
-                    placeholder="Enter product details"
-                    name="description"
-                    className="text-area-for-new-product"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.description}
-                  ></textarea>
-                </td>
-              </tr>
-              <tr>
-                <td> Category</td>
-                <td>
-                  <select
-                    name="category"
-                    className="selectbox-newProduct"
-                    onChange={(e) => handleChange(e)}
-                    value={newProductDetails.category}
-                  >
-                    <option value={null}>---Choose an option---</option>
-                    <option value="Smart phone">Smart phone</option>
-                    <option value="Laptop">Laptop</option>
-                    <option value="Gadget">Gadget</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td> Product photo</td>
-                <td>
-                  <input
-                    name="file"
-                    className="newProduct-photo"
-                    type="file"
-                    onChange={(e) => handleChange(e)}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <form className="w-full">
+            <table className="w-full newProduct-table">
+              <tbody>
+                <tr>
+                  <td> Product title</td>
+                  <td>
+                    <input
+                      placeholder="Enter product title"
+                      name="title"
+                      className="newProduct-input"
+                      type="text"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.title}
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Company</td>
+                  <td>
+                    <input
+                      placeholder="Enter product company"
+                      name="brand"
+                      className="newProduct-input"
+                      type="text"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.company}
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Model</td>
+                  <td>
+                    <input
+                      placeholder="Enter product model"
+                      name="model"
+                      className="newProduct-input"
+                      type="text"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.model}
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Price ($)</td>
+                  <td>
+                    <input
+                      placeholder="Enter product price"
+                      name="price"
+                      className="newProduct-input"
+                      type="text"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.price}
+                      required
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td> Description</td>
+                  <td>
+                    <textarea
+                      placeholder="Enter product details"
+                      name="description"
+                      className="text-area-for-new-product"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.description}
+                      required
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td> Category</td>
+                  <td>
+                    <select
+                      name="category"
+                      className="selectbox-newProduct"
+                      onChange={(e) => handleChange(e)}
+                      value={newProductDetails.category}
+                      required
+                    >
+                      <option value={null}>---Choose an option---</option>
+                      <option value="Smart phone">Smart phone</option>
+                      <option value="Laptop">Laptop</option>
+                      <option value="Gadget">Gadget</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td> Product photo</td>
+                  <td>
+                    <input
+                      name="file"
+                      className="newProduct-photo"
+                      type="file"
+                      onChange={(e) => handleChange(e)}
+                      required
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
         </div>
         <div>
           <button
+          type="submit"
             onClick={() => uploadNewProduct(uploadReady, newProductDetails)}
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded"
           >
