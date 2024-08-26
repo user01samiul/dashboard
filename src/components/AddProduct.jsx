@@ -1,5 +1,11 @@
-import { getDatabase, ref, set } from "firebase/database";
-import React, { useState } from "react";
+import { ref as databaseRef, getDatabase, set } from "firebase/database";
+import {
+  getDownloadURL,
+  getStorage,
+  ref as storageReference,
+  uploadBytes,
+} from "firebase/storage";
+import { useState } from "react";
 
 function AddProduct({ setShow, show, rows }) {
   const [newProductDetails, setNewProductDetails] = useState({
@@ -12,30 +18,60 @@ function AddProduct({ setShow, show, rows }) {
     category: "",
     photo: "",
     status: "In stock",
+    file: null,
   });
 
   function handleChange(e) {
     const type = e.target.type;
     const name = e.target.name;
     const file = e.target.files && e.target.files[0];
+
     setNewProductDetails((prev) => {
       return {
         ...prev,
         [name]: type === "file" ? file : e.target.value,
         id: rows.length + 1,
-      }; //dynamic name
+      };
     });
   }
-  const uploadReady = [...rows, newProductDetails];
 
-  //upload new product
-  async function uploadNewProduct(data) {
+  const uploadReady = [...rows];
+
+  // Upload new product
+  async function uploadNewProduct(data, newProductDetails) {
     const db = getDatabase();
-    const dataRef = ref(db, "products/");
+    const dataRef = databaseRef(db, "products/");
+
+    const storage = getStorage();
+    const productStorageRef = storageReference(
+      storage,
+      `products/${newProductDetails.file.name}`
+    );
 
     try {
-      const sendData = await set(dataRef, data);
-      window.location.reload(); //refresh after finished
+      // Upload file to Firebase Storage
+      const uploadResult = await uploadBytes(
+        productStorageRef,
+        newProductDetails.file
+      );
+      console.log("File uploaded:", uploadResult);
+
+      // Get the download URL
+      const downloadURL = await getDownloadURL(uploadResult.ref);
+      console.log("File available at:", downloadURL);
+
+      // Add the download URL to newProductDetails
+      const someData = { ...newProductDetails };
+      someData.photo = downloadURL;
+
+      uploadReady.push(someData);
+
+      // Save product details to the database
+      await set(dataRef, uploadReady);
+
+      // Reload the page after successful upload
+      setShow(false); // Close the modal after adding new product
+      // window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -135,7 +171,7 @@ function AddProduct({ setShow, show, rows }) {
                 <td> Product photo</td>
                 <td>
                   <input
-                    name="photo"
+                    name="file"
                     className="newProduct-photo"
                     type="file"
                     onChange={(e) => handleChange(e)}
@@ -147,8 +183,8 @@ function AddProduct({ setShow, show, rows }) {
         </div>
         <div>
           <button
-            className="py-2 text-white text-bold px-7 active:scale-95 bg-green-600 m-4"
-            onClick={() => uploadNewProduct(uploadReady)}
+            onClick={() => uploadNewProduct(uploadReady, newProductDetails)}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded"
           >
             Upload
           </button>

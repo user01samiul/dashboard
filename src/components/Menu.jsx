@@ -21,18 +21,18 @@ function Menu() {
               <i className="fa-solid fa-house"></i>Home page
             </Link>
           </li>
-          <li>
+          {/* <li>
             <i className="fa-regular fa-user"></i>Profile
-          </li>
+          </li> */}
         </ul>
       </div>
 
       <div className="menu-div">
         <h3>SECTION</h3>
         <ul>
-          <li>
+          {/* <li>
             <i className="fa-solid fa-cart-shopping"></i>Users
-          </li>
+          </li> */}
           <li
             onClick={() => handleClick("products")}
             className={`${selected === "products" ? "text-green-700" : ""}`}

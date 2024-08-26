@@ -51,7 +51,8 @@
 }
 .confirmDeletion {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.726);
+  background-color: rgb(255, 255, 255,0.1);
+  box-shadow: 1px 1px 5px 10px;
   top: 0;
   left: 0;
   width: 100%;
@@ -68,8 +69,9 @@
   align-items: center;
   height: 400px;
   width: 500px;
-  background-color: rgba(0, 0, 0, 0.822);
-  border-radius: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 5px 5px rgba(204, 204, 204, 0.2);
+  border-radius: 15px;
   column-rule-color: white;
 }
 .deletionContainer h3 {

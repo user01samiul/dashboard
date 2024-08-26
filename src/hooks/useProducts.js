@@ -13,10 +13,16 @@ export default function useProducts() {
     async function fetchData() {
       try {
         const snapshot = await get(ProductsQuery);
-        if (snapshot.exists) {
-          setProducts((prev) => {
-            return [...prev, ...Object.values(snapshot.val())];
-          });
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          // Check if data is valid before using Object.values
+          if (data) {
+            setProducts((prev) => {
+              return [...prev, ...Object.values(data)];
+            });
+          } else {
+            console.log("No products found");
+          }
         } else {
           console.log("Something went wrong");
         }
@@ -29,5 +35,3 @@ export default function useProducts() {
 
   return { products };
 }
-
-

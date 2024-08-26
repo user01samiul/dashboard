@@ -10,7 +10,7 @@ import useProducts from "../hooks/useProducts";
 
 export default function Users() {
   const { products } = useProducts();
- 
+
   const [rowSelectionModel, setRowSelectionModel] = React.useState([]);
   const [deletePopup, setDetetePopup] = React.useState(false);
   const showFromLocalStorage = JSON.parse(localStorage.getItem("show"));
@@ -38,9 +38,13 @@ export default function Users() {
       renderCell: (params) => {
         return (
           <div className="edit">
-           
-            <Link to={`/editproduct/${params.row.id}`} state={{product : params.row}}>
-              <i className="fa-regular fa-pen-to-square"></i>
+            <Link
+              to={`/editproduct/${params.row.id}`}
+              state={{ product: params.row }}
+            >
+              <button className="cursor-pointer " disabled>
+                <i className="fa-regular fa-pen-to-square "></i>
+              </button>
             </Link>
           </div>
         );
@@ -126,7 +130,7 @@ export default function Users() {
       <div style={{ width: "90%" }}>
         <div className="add-newProduct">
           <button
-            className="px-2 py-1 my-1 bg-blue-600"
+            className="bg-blue-500 mt-2 ml-0 mb-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={() => setShow(true)}
           >
             Add a new product
@@ -152,13 +156,14 @@ export default function Users() {
             rowSelectionModel={rowSelectionModel}
           />
         </Box>
+
         <button
           disabled={rowSelectionModel.length < 1}
-          className={`py-2 px-4 ${
-            rowSelectionModel.length < 1 ? `bg-gray-600` : ` bg-red-600`
-          } float-right m-1`}
           // eslint-disable-next-line react/jsx-no-duplicate-props
           onClick={() => setDetetePopup(true)}
+          className={` ${
+            rowSelectionModel.length < 1 ? `bg-gray-600` : ` bg-red-600`
+          }  float-right m-1 hover:cursor-pointer text-white font-bold py-2 px-4 rounded `}
         >
           Delete selected
         </button>
@@ -169,6 +174,7 @@ export default function Users() {
         multipleDelete={() => multipleDelete(rowSelectionModel)}
       />
       <AddProduct setShow={setShow} show={show} rows={rows} />
+      <p className="mt-2 "><span className="text-red-500">Edit icon</span> is disabled currently</p>
     </>
   );
 }
